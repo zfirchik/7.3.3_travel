@@ -1,0 +1,14 @@
+.gallery-block {
+  margin: 0 0 80px;
+
+  &__wrap {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 1fr 215px;
+    gap: 20px;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,45 @@
+.footer {
+  background-color: $color-black;
+  padding: 40px 0;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__logo-link {
+    svg {
+      width: 140px;
+      height: 40px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__info-tel {
+    color: $color-white;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -0.02em;
+  }
+
+  &__info-tel:hover,
+  &__info-tel:focus-visible {
+    color: $color-deep-lilac;
+  }
+
+  &__info-description {
+    color: $color-white-50;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0;
+  }
+}
