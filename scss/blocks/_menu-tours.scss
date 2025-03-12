@@ -27,30 +27,36 @@
     align-items: center;
     gap: 10px;
     cursor: pointer;
-  }
 
-  &__link-text {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 20px;
-  }
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      color: $color-deep-lilac;
+    }
 
-  &__link svg {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-  }
+    &--active {
+      color: $color-deep-lilac;
+  
+      .menu-tours__link-text {
+        font-weight: 700;
+      }
+    }
 
-  &__link--all {
-    color: $color-deep-lilac;
-    font-weight: 700;
-  }
+    & svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
 
-  &__link--active {
-    color: $color-deep-lilac;
+    &--all {
+      color: $color-deep-lilac;
+      font-weight: 700;
+    }
 
-    .menu-tours__link-text {
-      font-weight: 600;
+    &-text {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
     }
   }
 

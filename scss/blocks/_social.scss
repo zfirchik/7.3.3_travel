@@ -16,6 +16,13 @@
     border-radius: 50%;
     border: 1px solid $color-deep-lilac-50;
     color: $color-deep-lilac;
+
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      background-color: $color-white;
+      border-color: $color-white;
+    }
   }
 
   &__link-icon{

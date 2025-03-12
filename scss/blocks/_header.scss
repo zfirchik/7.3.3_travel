@@ -21,6 +21,12 @@
     font-weight: 500;
     line-height: 20px;
     color: $color-white;
+
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      color: $color-white-50;
+    }
   }
 
   &__content {

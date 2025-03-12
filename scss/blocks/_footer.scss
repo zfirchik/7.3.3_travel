@@ -29,11 +29,11 @@
     font-weight: 700;
     line-height: 36px;
     letter-spacing: -0.02em;
-  }
 
-  &__info-tel:hover,
-  &__info-tel:focus-visible {
-    color: $color-deep-lilac;
+    &:hover,
+    &:focus-visible {
+      color: $color-deep-lilac;
+    }
   }
 
   &__info-description {
