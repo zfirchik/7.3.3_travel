@@ -526,6 +526,49 @@
     <div class="modal__wrapper">
       <div class="modal__content">
         <!-- Место для формы и успешной отправки -->
+        <form class="modal-form" action="#" method="post">
+          <h2 class="modal-form__title">Заявка на подбор тура</h2>
+          <div class="modal-form__wrapper">
+            <div class="custom-input">
+              <span class="custom-input__error">Некорректное значение</span>
+              <input class="custom-input__field" type="tel" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ" name="user-phone" id="user-phone" required>
+              <label class="custom-input__label" for="user-phone">Телефон*</label>
+            </div>
+            <div class="custom-input">
+              <span class="custom-input__error">Некорректное значение</span>
+              <input class="custom-input__field" type="text" name="user-name" id="user-name">
+              <label class="custom-input__label" for="user-name">Имя</label>
+            </div>
+            <div class="custom-input">
+              <span class="custom-input__error">Некорректное значение</span>
+              <input class="custom-input__field" type="email" name="user-email" id="user-email">
+              <label class="custom-input__label" for="user-email">E-mail</label>
+            </div>
+            <div class="custom-textarea">
+              <span class="custom-textarea__error">Некорректное значение</span>
+              <textarea class="custom-textarea__field" name="comment" id="comment"></textarea>
+              <label class="custom-textarea__label" for="comment">Комментарий</label>
+            </div>
+          </div>
+          <div class="modal-form__submit">
+            <button class="btn modal-form__btn btn--bg-lilac" type="submit">Оставить заявку</button>
+            <p class="modal-form__terms">Нажимая кнопку &quot;Оставить заявку&quot;, вы&nbsp;соглашаетесь с&nbsp;условиями сервиса</p>
+          </div>
+          <svg class="modal-form__suitcase" width="71" height="134">
+            <use xlink:href="images/sprite.svg#icon-suitcase"></use>
+          </svg>
+          <svg class="modal-form__plane" width="234" height="72">
+            <use xlink:href="images/sprite.svg#icon-plane"></use>
+          </svg>
+        </form>
+        <div class="modal-success">
+          <svg class="modal-success__icon" width="130" height="85">
+            <use xlink:href="images/sprite.svg#icon-confetti"></use>
+          </svg>
+          <p class="modal-success__title">Спасибо!</p>
+          <p class="modal-success__message">Мы&nbsp;получили ваш запрос и&nbsp;скоро свяжемся с&nbsp;вами.</p>
+          <button class="btn modal-success__btn" type="button">Хорошо</button>
+        </div>
         <button class="modal__close-btn" aria-label="Закрыть форму">
           <svg class="modal__close-icon" width="20" height="20" aria-hidden="true">
             <use xlink:href="images/sprite.svg#icon-close"></use>

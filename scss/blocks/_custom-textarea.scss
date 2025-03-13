@@ -1,0 +1,84 @@
+.custom-textarea {
+  grid-column: 1 / 4;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: 5px;
+  position: relative;
+
+  &__label {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    color: $color-grey-suit;
+    cursor: pointer;
+    user-select: none;
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  &__field {
+    padding: 16px;
+    min-height: 158px;
+    border: 1px solid $color-hawkes-blue;
+    border-radius: 8px;
+    color: $color-nero;
+    resize: none;
+
+    @include vp-1023 {
+      min-height: 140px;
+    }
+
+    @include vp-767 {
+      min-height: 120px;
+      font-size: 14px;
+      line-height: 18px;
+      padding: 14px;
+    }
+
+    &[disabled] {
+      background-color: $color-ghost-white;
+    }
+
+    &::placeholder {
+      color: $color-grey-suit;
+    }
+    &[disabled]::placeholder {
+      opacity: 0.5;
+    }
+
+    &:hover,
+    &:focus-visible {
+      border: 1px solid $color-deep-lilac;
+      outline: none;
+    }
+  }
+
+  &__field[disabled],
+  &__field[disabled] + &__label {
+    pointer-events: none;
+  }
+
+  &__error {
+    display: none;
+  }
+
+  &--error &__field {
+    border-color: $color-error;
+  }
+
+  &--error &__error {
+    display: block;
+    position: absolute;
+    top: 100%;
+    font-size: 12px;
+    line-height: 16px;
+    color: $color-error;
+    z-index: 1;
+  }
+}

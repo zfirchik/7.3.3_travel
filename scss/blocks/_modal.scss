@@ -6,6 +6,13 @@
   height: 100%;
   display: none;
 
+  &--success &__wrapper &__content &-form {
+    display: none;
+  }
+  &--success &__wrapper &__content &-success {
+    display: flex;
+  }
+
   &::after {
     content: "";
     z-index: -1;
@@ -31,6 +38,11 @@
     width: 100%;
     height: 100%;
     padding: 40px;
+
+    @include vp-1023 {
+      background-color: $color-white;
+      padding: 0;
+    }
   }
 
   &__content {
@@ -42,26 +54,235 @@
     margin: auto;
     padding: 30px 70px 60px;
     background-color: $color-white;
+    display: flex;
+    justify-content: center;
+
+    @include vp-1023 {
+      margin: 0;
+      padding: 30px 120px;
+      height: 100%;
+    }
+
+    @include vp-767 {
+      padding: 20px;
+    }
   }
+
+  &-form {
+    width: 100%;
+    gap: 30px;
+
+    &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px 30px;
+      margin: 0 0 40px 0;
+
+      @include vp-1023 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 0 0 30px 0;
+      }
+    }
+
+    &__title {
+      grid-column: 1 / -1;
+      font-size: 32px;
+      line-height: 36px;
+      font-weight: 600;
+      text-align: center;
+      margin: 0 0 60px;
+
+      @include vp-1023 {
+        font-size: 26px;
+        line-height: 32px;
+        margin: 0 0 30px;
+      }
+
+      @include vp-767 {
+        font-size: 20px;
+        line-height: 20px;
+        min-height: 40px;
+        margin: 0 0 20px 0;
+      }
+    }
+
+    &__submit {
+      grid-column: 1 / -1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+
+      @include vp-1023 {
+        gap: 5px;
+      }
+    }
+
+    &__btn {
+      width: 300px;
+      line-height: 21px;
+
+      @include vp-767 {
+        width: 335px;
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+
+    &__terms {
+      margin: 0;
+      font-size: 12px;
+      line-height: 16px;
+      color: $color-grey-suit;
+
+      @include vp-767 {
+        text-align: center;
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
+
+    &__suitcase {
+      position: absolute;
+      left: 130px;
+      bottom: 80px;
+      opacity: 0.5;
+      pointer-events: none;
+
+      @include vp-1023 {
+        width: 80px;
+        height: 149px;
+        left: 20px;
+        bottom: 110px;
+        opacity: 1;
+      }
+
+      @include vp-767 {
+        display: none;
+      }
+    }
+
+    &__plane {
+      position: absolute;
+      right: 160px;
+      bottom: 40px;
+      opacity: 0.5;
+      pointer-events: none;
+
+      @include vp-1023 {
+        width: 340px;
+        height: 108px;
+        right: 40px;
+        bottom: -25px;
+        opacity: 1;
+      }
+
+      @include vp-767 {
+        display: none;
+      }
+    }
+  }
+
+  &-success {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 0 90px 0;
+
+    @include vp-1023 {
+      padding: 0;
+      margin: auto;
+    }
+
+    &__icon {
+      margin: 0 0 40px 0;
+
+      @include vp-767 {
+        margin: 0 0 30px 0;
+      }
+    }
+
+    &__title {
+      margin: 0 0 20px 0;
+      font-size: 32px;
+      line-height: 36px;
+      font-weight: 600;
+
+      @include vp-1023 {
+        font-size: 26px;
+        line-height: 32px;
+      }
+
+      @include vp-767 {
+        font-size: 20px;
+        line-height: 20px;
+        margin: 0 0 15px 0;
+      }
+    }
+    
+    &__message {
+      margin: 0 0 40px 0;
+      font-size: 16px;
+      line-height: 20px;
+
+      @include vp-767 {
+        margin: 0 0 30px 0;
+        font-size: 13px;
+        line-height: 16px;
+        min-height: 32px;
+      }
+    }
+
+    &__btn {
+      width: 200px;
+
+      @include vp-767 {
+        width: 160px;
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+  }
+
 
   &__close-btn {
     position: absolute;
-    top: 12px;
-    right: 23px;
+    top: 10px;
+    right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 70px;
     height: 70px;
     padding: 0;
-    background-color:  $color-ghost-white;
+    background-color: $color-ghost-white;
     border: none;
     border-radius: 50%;
     cursor: pointer;
 
+    @include vp-767 {
+      top: 5px;
+      right: 5px;
+      width: 48px;
+      height: 48px;
+    }
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-white-lilac-2;
+      outline: none;
+    }
+
     svg {
       width: 20px;
       height: 20px;
+
+      @include vp-767 {
+        width: 14px;
+        height: 14px;
+      }
     }
   }
 }
