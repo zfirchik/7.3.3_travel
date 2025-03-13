@@ -1,14 +1,48 @@
 .gallery-block {
   margin: 0 0 80px;
 
+  @include vp-1023 {
+    margin: 0 0 125px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 60px;
+  }
+
   &__wrap {
     display: grid;
     align-items: start;
     grid-template-columns: 1fr 215px;
     gap: 20px;
+
+    @include vp-1023 {
+      grid-template-columns: 1fr 180px;
+      gap: 28px;
+    }
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 30px;
+    }
   }
 
   &__btn {
     width: 100%;
+
+    @include vp-1023 {
+      position: absolute;
+      width: 708px;
+      font-size: 14px;
+      line-height: 18px;
+      padding: 13px 0;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 16px;
+      position: unset;
+      width: 100%;
+    }
   }
 }
