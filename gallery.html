@@ -522,13 +522,13 @@
       </div>
     </div>
   </footer>
-  <div class="modal">
+  <div class="modal modal--active">
     <div class="modal__wrapper">
       <div class="modal__content">
         <!-- Место для формы и успешной отправки -->
-        <form class="modal-form" action="#" method="post">
-          <h2 class="modal-form__title">Заявка на подбор тура</h2>
-          <div class="modal-form__wrapper">
+        <div class="modal-request">
+          <h2 class="modal-request__title">Заявка на подбор тура</h2>
+          <form class="modal-request__form" action="#" method="post">
             <div class="custom-input">
               <span class="custom-input__error">Некорректное значение</span>
               <input class="custom-input__field" type="tel" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ" name="user-phone" id="user-phone" required>
@@ -549,18 +549,19 @@
               <textarea class="custom-textarea__field" name="comment" id="comment"></textarea>
               <label class="custom-textarea__label" for="comment">Комментарий</label>
             </div>
-          </div>
-          <div class="modal-form__submit">
-            <button class="btn modal-form__btn btn--bg-lilac" type="submit">Оставить заявку</button>
-            <p class="modal-form__terms">Нажимая кнопку &quot;Оставить заявку&quot;, вы&nbsp;соглашаетесь с&nbsp;условиями сервиса</p>
-          </div>
-          <svg class="modal-form__suitcase" width="71" height="134">
-            <use xlink:href="images/sprite.svg#icon-suitcase"></use>
-          </svg>
-          <svg class="modal-form__plane" width="234" height="72">
-            <use xlink:href="images/sprite.svg#icon-plane"></use>
-          </svg>
-        </form>
+            <div class="modal-request__submit">
+              <button class="btn modal-request__btn btn--bg-lilac" type="submit">Оставить заявку</button>
+              <p class="modal-request__terms">Нажимая кнопку &quot;Оставить заявку&quot;, вы&nbsp;соглашаетесь с&nbsp;условиями сервиса</p>
+            </div>
+            <svg class="modal-request__suitcase" width="71" height="134">
+              <use xlink:href="images/sprite.svg#icon-suitcase"></use>
+            </svg>
+            <svg class="modal-request__plane" width="234" height="72">
+              <use xlink:href="images/sprite.svg#icon-plane"></use>
+            </svg>
+          </form>
+        </div>
+
         <div class="modal-success">
           <svg class="modal-success__icon" width="130" height="85">
             <use xlink:href="images/sprite.svg#icon-confetti"></use>

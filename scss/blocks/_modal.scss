@@ -6,13 +6,6 @@
   height: 100%;
   display: none;
 
-  &--success &__wrapper &__content &-form {
-    display: none;
-  }
-  &--success &__wrapper &__content &-success {
-    display: flex;
-  }
-
   &::after {
     content: "";
     z-index: -1;
@@ -25,8 +18,14 @@
     pointer-events: none;
   }
 
-  &--active {
+  &--active,
+  &--success,
+  &--active &__wrapper &__content &-request {
     display: block;
+  }
+
+  &--success &__wrapper &__content &-success {
+    display: flex;
   }
 
   &__wrapper {
@@ -68,15 +67,16 @@
     }
   }
 
-  &-form {
+  &-request {
+    display: none;
     width: 100%;
     gap: 30px;
 
-    &__wrapper {
+    &__form {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 35px 30px;
-      margin: 0 0 40px 0;
+      margin: 0;
 
       @include vp-1023 {
         display: flex;

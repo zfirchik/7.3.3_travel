@@ -7,6 +7,11 @@
   justify-content: flex-end;
   gap: 5px;
   position: relative;
+  margin: 0 0 5px 0;
+
+  @include vp-1023 {
+    margin: 0 0 10px 0;
+  }
 
   &__label {
     font-size: 14px;
